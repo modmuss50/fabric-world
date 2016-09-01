@@ -1,5 +1,5 @@
-# fabric-mod-template
-A template for simple Fabric mods.
+# fabric-world
+A simple hook to allow world generation.
 
 ## Setup
 In the `gradle.properties` file, change the `group` and `archivesBaseName` to their appropriate values. Generally, the group is a reverse domain name (e.g. `com.example`), if you don't own a domain name it is acceptable to use your own name for the group. The `archivesBaseName` is the name of your mod. 
