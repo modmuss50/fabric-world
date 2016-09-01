@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.fabricmc.world.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinBiomeGenerator"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

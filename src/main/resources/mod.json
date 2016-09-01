@@ -1,0 +1,8 @@
+{
+  "id": "fabric-world",
+  "group": "net.fabricmc",
+  "version": "1.0.0",
+  "mixins": {
+    "common": "fabric.world.mixin.common.json"
+  }
+}
