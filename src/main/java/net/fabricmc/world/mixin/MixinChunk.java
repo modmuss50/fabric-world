@@ -25,6 +25,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
+import java.util.Random;
+
 @Mixin(value = Chunk.class, remap = false)
 public class MixinChunk {
 
@@ -42,8 +44,9 @@ public class MixinChunk {
 		} else {
 			getChunk().o();
 			generator.b(this.chunkX, this.chunkZ);
+			Random random = new Random(getChunk().world.getSeed());
 			for (IWorldGenerator iWorldGenerator : FabricWorld.worldGenerators) {
-				iWorldGenerator.generate(getChunk(), getChunk().getWorld(), getChunk().a(0), new BlockPos(chunkX << 4, 0, chunkZ << 4));
+				iWorldGenerator.generate(getChunk(), getChunk().getWorld(), random, new BlockPos(chunkX << 4, 0, chunkZ << 4));
 			}
 			getChunk().e();
 		}

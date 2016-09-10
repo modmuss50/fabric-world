@@ -4,6 +4,5 @@
   "version": "1.0.0",
   "mixins": {
     "common": "fabric.world.mixin.common.json"
-  },
-  "modClass" : "net.fabricmc.world.TestFabricWorld"
+  }
 }
