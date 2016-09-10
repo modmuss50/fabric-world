@@ -3,7 +3,7 @@
   "package": "net.fabricmc.world.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MixinBiomeGenerator"
+    "MixinChunk"
   ],
   "injectors": {
     "defaultRequire": 1

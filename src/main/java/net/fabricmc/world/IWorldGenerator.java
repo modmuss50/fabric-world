@@ -16,25 +16,14 @@
 
 package net.fabricmc.world;
 
-import net.fabricmc.base.loader.Init;
-import net.minecraft.reference.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 
 import java.util.Random;
 
-public class TestFabricWorld implements IWorldGenerator {
+public interface IWorldGenerator {
 
-	@Init
-	public void init() {
-		FabricWorld.registerWorldGen(this);
-	}
+	void generate(Chunk chunk, World world, Random random, BlockPos pos);
 
-	@Override
-	public void generate(Chunk chunk, World world, Random random, BlockPos pos) {
-		for (int i = 0; i < 10; i++) {
-			world.setBlockState(pos.add(random.nextInt(15), 65 + i, random.nextInt(15)), Blocks.DIAMOND_BLOCK.defaultState, 2);
-		}
-	}
 }
